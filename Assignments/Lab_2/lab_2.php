@@ -41,7 +41,7 @@ echo $degreese_k;
  */
 function dodecahedronVolume($area)
 {
-$volume = (15 + 7*sqrt(5)/4 * pow($area,3)));
+$volume = ((15 + 7 * sqrt(5))/4) * pow($area,3);
 echo $volume;
 }
 
@@ -50,6 +50,14 @@ echo $volume;
  */
 function impactVelocity($height)
 {
-$velocity = sqrt(2*$gravity*$height);
+$velocity = sqrt(2*GRAVITY*$height);
 echo $velocity;
 }
+
+impactVelocity(5);
+echo "<br>";
+truncateFloat(3.1458976);
+echo "<br>";
+farenheit2Kelvin(58);
+echo "<br>";
+dodecahedronVolume(20);
