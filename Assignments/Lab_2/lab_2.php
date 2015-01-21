@@ -23,7 +23,8 @@ define('GRAVITY', 9.8);
 
 function truncateFloat($float_value)
 {
-
+ $float_value = (int)($float_value*100)/100;
+ echo $float_value;
 }
 
 /**
@@ -31,7 +32,8 @@ function truncateFloat($float_value)
  */
 function farenheit2Kelvin($degrees_f)
 {
-
+$degreese_k = ($degrees_f - 32) * 5/9 + 273.15;
+echo $degreese_k;
 }
 
 /**
@@ -39,7 +41,8 @@ function farenheit2Kelvin($degrees_f)
  */
 function dodecahedronVolume($area)
 {
-
+$volume = (15 + 7*sqrt(5)/4 * pow($area,3)));
+echo $volume;
 }
 
 /**
@@ -47,5 +50,6 @@ function dodecahedronVolume($area)
  */
 function impactVelocity($height)
 {
-
+$velocity = sqrt(2*$gravity*$height);
+echo $velocity;
 }
