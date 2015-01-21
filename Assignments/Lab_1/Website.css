@@ -1,0 +1,124 @@
+
+body{background: #5900b0;
+background-size: cover;
+  }
+
+
+#logo{			
+	width: 40%;
+	padding: 5%;
+	margin: 20px;
+	margin-left:auto;
+	margin-right: auto;
+	background:url(http://web.vtc.edu/users/cxw01251/project/logo.jpg);
+	border-radius: 1em;
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	}
+	
+
+#menus {	
+	width:93%;
+	padding: 10px;
+	text-align: center;
+	border: 5px solid black;
+	border-radius: 1em;
+	margin: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	}
+#menus a { background: #660066; 
+	box-shadow: 15px 10px 15px rgba(0,0,0,0.25);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-block;}
+#menus a:link {color:#FFFFFF}
+#menus a:link{text-decoration:none}
+#menus a:visited{color:#FFFFFF}
+
+
+.linkplace{		padding: 10px;
+				margin-left: 5%;
+				margin-right: 5%
+}
+.imgpad{		padding: 10px;
+}
+				
+
+
+#leftBar { 		float: left;
+				width: 25%;
+				padding: 10px;
+				text-align: left;
+				color: silver;
+				border: 3px solid black;
+				border-radius: 1em;
+				margin-left: 5%;
+				margin-bottom:5%;
+				margin-right: 5%;
+				}
+
+#RightBar { 		float: right;
+				width: 25%;
+				padding: 10px;
+				color: Silver;
+				text-align: left;
+				border: 3px solid black;
+				border-radius: 1em;
+				margin-left: 5%;
+				margin-right: 5%;}
+#RightBar a:link{color:#FFFFFF}
+#RightBar a:link{text-decoration:none}
+#RightBar a:visited{color:#FFFFFF}
+
+#DK { 		display: block;
+				float: right;
+				color: Silver;
+				width: 25%;
+				border: 3px solid black;
+				border-radius: 1em;
+				padding: 10px;
+				text-align: left;
+				margin-left: 5%;
+				margin-right: 5%;
+				margin-top: 0%;
+				}
+
+#pic {			width: 50%;
+				padding: 2%;
+				margin: 10px;}
+
+				
+#StreamBar { 	display: block;
+				float: right;
+				color: Silver;
+				width: 25%;
+				padding: 10px;
+				text-align: left;
+				margin-left: 5%;
+				margin-right: 5%;
+				margin-top: 50%
+				margin-bottom: 50%}
+#StreamBar a:link{color:#FFFFFF}
+#StreamBar a:visited{color:#CFA6CF}
+			
+
+#BottomStuff
+	{
+	clear : both;
+	padding: 1px;
+	max-width: 90%;
+	font-size : 0.9em;
+	border: 5px solid black;
+	color: silver;
+	border-radius: 1em;
+	margin: 15px;
+	margin-top: 15;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align : center;
+	padding-left : 10px;
+}
