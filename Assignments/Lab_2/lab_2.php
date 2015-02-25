@@ -1,30 +1,33 @@
 <?php
 
-/**
- * Lab 2, Arithmatic Lab
- *
- * This lab focuses on your understanding of arithmatic.
- *
- * @version 1.0
- * @author YOUR_NAME <YOUR_EMAIL_ADDRESS@vtc.edi>
- * @since 20150120
- */
-
-/**
- * Outputs to the console a truncated float.
- *
- * Takes in a floating point number and truncates in to two places of precision.
- * Then returns to the output to the console.
- *
- * @param $float_value
- */
-
 define('GRAVITY', 9.8);
+<html>
+<head>
+<title>Simple PHP Form Example</title>
+</head>
+<body>
+EOD;
+$footer = <<< EOD
+</body>
+</html>
+EOD;
+
+$form_layout = <<< EOD
+<p>
+<form method = "post" action="">
+<label name="truncateFloat">Floating Point Value</label><input type="text" name="truncateFloat"<br>
+<label name="farenheit2Kelvin"> Farenheight Value</label><input type="text" name="farenheit2Kelvin"<br>
+<label name="dodecahedronVolume">Dodecahedron Side Vale</label><input type="text" name="dodecahedronVolume"<br>
+<label name="impactVelocity"> Height of fall value</label><input type type="text" name="impactVelocity"<br>
+<input type="submit" value="submit" name="submit">
+</form>
+</p>
+EOD;
+
 
 function truncateFloat($float_value)
 {
- $float_value = (int)($float_value*100)/100;
- echo $float_value;
+ return(int) floatval($float_value * 100) /100;
 }
 
 /**
@@ -32,8 +35,7 @@ function truncateFloat($float_value)
  */
 function farenheit2Kelvin($degrees_f)
 {
-$degreese_k = ($degrees_f - 32) * 5/9 + 273.15;
-echo $degreese_k;
+return ($degrees_f -32) * 5/9 + 273.15;
 }
 
 /**
@@ -41,23 +43,44 @@ echo $degreese_k;
  */
 function dodecahedronVolume($area)
 {
-$volume = ((15 + 7 * sqrt(5))/4) * pow($area,3);
-echo $volume;
+return pow($area, 3)/4 *(15 + 7 * sqrt(5));
 }
 
 /**
  * @param $height
  */
 function impactVelocity($height)
-{
-$velocity = sqrt(2*GRAVITY*$height);
-echo $velocity;
+return sqrt(2 * GRAVITY * $height);
 }
-
-impactVelocity(5);
-echo "<br>";
-truncateFloat(3.1458976);
-echo "<br>";
-farenheit2Kelvin(58);
-echo "<br>";
-dodecahedronVolume(20);
+if(isset($_POST['submit'])){
+$truncateFloatResult = truncateFloat($_POST["truncateFloat"]);
+$farenheit2KelvinResult = farenheit2Kelvin($_POST["farenheit2Kelvin"]);
+$dodecahedronVolumeResult = dodecahedronVolume($_POST["dodecahedronVolume"]);
+$impactVelocityResult = impactVelocity($_POST["impactVelocity"]);
+} else {
+$truncateFloatResult = "";
+$farenheit2KelvinResult = "";
+$dodecahedronVolumeResult = "";
+$impactVelocityResult = "";
+}
+if (!isset($_POST('submit'])){
+	//display the form
+	echo $form_layout;
+	}else{
+	$form_result = $header;
+	if (!empty($truncateFloatResult)){
+	$form_result .= "The truncated float point value is: " .$truncateFloatResult . "<br>";
+	}
+	if (!empty($farenheit2KelvinResult)){
+	$form_result .= "The Kelvan value is: " .$farenheit2KelvinResult . "<br>";
+	}
+	if (!empty($dodecahedronVolumeResult)) {
+	$form_result .= "The dodecahedron volume is ".$dodecahedronVolumeResult ."<br>";
+	}
+	if (!empty($impactVelocityResult)){
+	$form_result .= "The splat value is: " .$impactVelocityResult ."<br>";
+	}
+	$form_result.=$footer;
+	echo $form_result;
+	}
+	?>
